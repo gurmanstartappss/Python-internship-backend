@@ -12,6 +12,3 @@ x=Child()
 x.me()
 x.paps()
 x.mama()
-git add .
-git commit -m ""
-git pus origin main
