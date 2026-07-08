@@ -45,7 +45,7 @@ sum((1,3,5,6,8))
 sum({1,3,5,6,8})             
 
 
-# duck typing focus on only behavoiur Dog typing means Focuses on whether If an object has the required methods or attributes
+# duck typing focus on only behavoiur Duck typing means Focuses on whether If an object has the required methods or attributes
 
 class Dog:
     def speak(self):

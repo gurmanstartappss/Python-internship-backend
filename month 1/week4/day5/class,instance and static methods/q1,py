@@ -1,0 +1,15 @@
+class Student():
+    def __init__(self,name,marks):
+        self.name=name
+        self.marks=marks
+
+    def hmarks(self,new_marks):
+        self.marks=new_marks
+        return self.marks
+
+    def show(self):
+        return self.name , self.marks
+    
+x=Student("gurman",77)
+x.hmarks(55)
+print(x.show())

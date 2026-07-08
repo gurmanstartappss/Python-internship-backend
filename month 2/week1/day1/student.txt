@@ -1,0 +1,4 @@
+paridhi: 50000
+avantika: 60000
+pranjali: 60000
+arya: 40000

@@ -111,7 +111,7 @@ class Student(Person):
 
 obj1 = Employee()
 obj1.work()
-print("-----------------------------------")
+print("----------------super()-------------------")
 
 """
 super() used when 1 method overrides other, this method represents parent class and is used to call parent class's constructors (__init__),methods as well as attributes(self.name)
@@ -138,7 +138,7 @@ class Child(Employee, Student):
 
 obj1 = Employee()
 obj1.work()
-print("----------------------------------")
+print("---------mro-------------------------")
 
 
 # mro-method resolution order is the order in which python searches for a method or attribute when its called on as object
@@ -163,3 +163,34 @@ class Student(Employee,Manager):
 
 obj1 = Student()
 obj1.work()
+print("---------mro-------------------------")
+
+
+"""
+inheritance:-(is a relationship)
+aggregation (weak has-a relationship): it is a "has-a" relationship where one zobject contains another object, but both have independent lifecycles.if the container object is destroyed, the contained object still exists.
+"""
+class Employee:
+    def __init__(self, name):
+        self.name = name
+
+
+class Department:
+    def __init__(self, name, emps):
+        self.name = name
+        self.employees = emps
+
+    def show_employees(self):
+        print(f"Employees in {self.name} department:")
+        for emp in self.employees:
+            print(emp.name)
+
+
+e1 = Employee("paridhi")
+e2 = Employee("Avantika")
+department=Department("it",[e1,e2])
+department.show_employees()
+"""
+composition
+association
+"""
