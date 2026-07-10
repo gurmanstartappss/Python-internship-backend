@@ -1,0 +1,48 @@
+2026-07-09 13:25:31,443- DEBUG-Debugging application
+2026-07-09 13:25:31,444- INFO-
+2026-07-09 13:25:31,444- WARNING-insuffient space
+2026-07-09 13:25:31,444- DEBUG-Debugging application
+2026-07-09 13:25:31,444- ERROR-program error
+2026-07-09 13:25:31,444- CRITICAL-server crashed
+2026-07-09 13:25:31,444- ERROR-Unable to read
+Traceback (most recent call last):
+  File "c:\Gurman\StartAppss\Python internship backend\month 2\week1\day4\class.py", line 77, in <module>
+    result = 100/0
+ZeroDivisionError: division by zero
+2026-07-09 13:25:31,444- ERROR-[Errno 2] No such file or directory: 'students.txt'
+2026-07-09 13:25:33,109- DEBUG-Debugging application
+2026-07-09 13:25:33,109- INFO-
+2026-07-09 13:25:33,109- WARNING-insuffient space
+2026-07-09 13:25:33,110- DEBUG-Debugging application
+2026-07-09 13:25:33,110- ERROR-program error
+2026-07-09 13:25:33,110- CRITICAL-server crashed
+2026-07-09 13:25:33,110- ERROR-Unable to read
+Traceback (most recent call last):
+  File "c:\Gurman\StartAppss\Python internship backend\month 2\week1\day4\class.py", line 77, in <module>
+    result = 100/0
+ZeroDivisionError: division by zero
+2026-07-09 13:25:33,111- ERROR-[Errno 2] No such file or directory: 'students.txt'
+2026-07-09 13:25:34,454- DEBUG-Debugging application
+2026-07-09 13:25:34,454- INFO-
+2026-07-09 13:25:34,454- WARNING-insuffient space
+2026-07-09 13:25:34,454- DEBUG-Debugging application
+2026-07-09 13:25:34,454- ERROR-program error
+2026-07-09 13:25:34,454- CRITICAL-server crashed
+2026-07-09 13:25:34,454- ERROR-Unable to read
+Traceback (most recent call last):
+  File "c:\Gurman\StartAppss\Python internship backend\month 2\week1\day4\class.py", line 77, in <module>
+    result = 100/0
+ZeroDivisionError: division by zero
+2026-07-09 13:25:34,455- ERROR-[Errno 2] No such file or directory: 'students.txt'
+2026-07-09 13:25:35,255- DEBUG-Debugging application
+2026-07-09 13:25:35,255- INFO-
+2026-07-09 13:25:35,255- WARNING-insuffient space
+2026-07-09 13:25:35,255- DEBUG-Debugging application
+2026-07-09 13:25:35,255- ERROR-program error
+2026-07-09 13:25:35,255- CRITICAL-server crashed
+2026-07-09 13:25:35,257- ERROR-Unable to read
+Traceback (most recent call last):
+  File "c:\Gurman\StartAppss\Python internship backend\month 2\week1\day4\class.py", line 77, in <module>
+    result = 100/0
+ZeroDivisionError: division by zero
+2026-07-09 13:25:35,257- ERROR-[Errno 2] No such file or directory: 'students.txt'

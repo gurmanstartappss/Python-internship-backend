@@ -1,0 +1,120 @@
+2026-07-10 12:44:51,915 - INFO -  - class.py - 27 - <module>
+2026-07-10 12:44:51,915 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 12:44:51,915 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 12:44:51,915 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 12:44:51,915 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 12:44:51,915 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 12:52:38,200 - INFO -  - class.py - 27 - <module>
+2026-07-10 12:52:38,200 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 12:52:38,200 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 12:52:38,200 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 12:52:38,201 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 12:52:38,202 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 12:53:10,001 - INFO -  - class.py - 27 - <module>
+2026-07-10 12:53:10,001 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 12:53:10,001 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 12:53:10,001 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 12:53:10,001 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 12:53:10,002 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 12:55:46,745 - INFO -  - class.py - 27 - <module>
+2026-07-10 12:55:46,745 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 12:55:46,745 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 12:55:46,745 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 12:55:46,745 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 12:55:46,745 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 12:56:10,919 - INFO -  - class.py - 27 - <module>
+2026-07-10 12:56:10,919 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 12:56:10,919 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 12:56:10,919 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 12:56:10,919 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 12:56:10,919 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 12:57:49,073 - INFO -  - class.py - 27 - <module>
+2026-07-10 12:57:49,073 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 12:57:49,073 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 12:57:49,073 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 12:57:49,073 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 12:57:49,073 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 12:58:28,328 - INFO -  - class.py - 27 - <module>
+2026-07-10 12:58:28,328 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 12:58:28,328 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 12:58:28,328 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 12:58:28,328 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 12:58:28,329 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 13:19:16,937 - INFO -  - class.py - 27 - <module>
+2026-07-10 13:19:16,937 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 13:19:16,937 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 13:19:16,937 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 13:19:16,937 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 13:19:16,938 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 13:19:28,925 - INFO -  - class.py - 27 - <module>
+2026-07-10 13:19:28,926 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 13:19:28,926 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 13:19:28,926 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 13:19:28,926 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 13:19:28,926 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 13:19:37,421 - INFO -  - class.py - 27 - <module>
+2026-07-10 13:19:37,422 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 13:19:37,422 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 13:19:37,422 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 13:19:37,422 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 13:19:37,422 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 13:20:12,970 - INFO -  - class.py - 27 - <module>
+2026-07-10 13:20:12,970 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 13:20:12,970 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 13:20:12,970 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 13:20:12,971 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 13:20:12,972 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 13:21:55,690 - INFO -  - class.py - 27 - <module>
+2026-07-10 13:21:55,691 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 13:21:55,691 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 13:21:55,691 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 13:21:55,691 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 13:21:55,691 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 13:24:06,653 - INFO -  - class.py - 27 - <module>
+2026-07-10 13:24:06,654 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 13:24:06,654 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 13:24:06,654 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 13:24:06,654 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 13:24:06,654 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 13:24:07,610 - INFO -  - class.py - 27 - <module>
+2026-07-10 13:24:07,611 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 13:24:07,611 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 13:24:07,611 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 13:24:07,611 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 13:24:07,611 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 13:24:21,529 - INFO -  - class.py - 27 - <module>
+2026-07-10 13:24:21,529 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 13:24:21,529 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 13:24:21,529 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 13:24:21,529 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 13:24:21,530 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 13:35:52,656 - INFO -  - class.py - 27 - <module>
+2026-07-10 13:35:52,656 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 13:35:52,656 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 13:35:52,656 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 13:35:52,656 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 13:35:52,656 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 13:36:45,784 - INFO -  - class.py - 27 - <module>
+2026-07-10 13:36:45,784 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 13:36:45,784 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 13:36:45,786 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 13:36:45,786 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 13:36:45,786 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 13:36:57,883 - INFO -  - class.py - 27 - <module>
+2026-07-10 13:36:57,884 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 13:36:57,884 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 13:36:57,884 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 13:36:57,884 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 13:36:57,884 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 13:38:31,668 - INFO -  - class.py - 27 - <module>
+2026-07-10 13:38:31,668 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 13:38:31,668 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 13:38:31,668 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 13:38:31,668 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 13:38:31,669 - ERROR - Employee id already exists. - class.py - 84 - Employee
+2026-07-10 13:38:32,954 - INFO -  - class.py - 27 - <module>
+2026-07-10 13:38:32,954 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 13:38:32,955 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 13:38:32,955 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 13:38:32,955 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 13:38:32,955 - ERROR - Employee id already exists. - class.py - 84 - Employee

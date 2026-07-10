@@ -1,0 +1,6 @@
+2026-07-10 12:41:09,302 - INFO -  - class.py - 27 - <module>
+2026-07-10 12:41:09,302 - WARNING - insuffient space - class.py - 28 - <module>
+2026-07-10 12:41:09,302 - ERROR - program error - class.py - 29 - <module>
+2026-07-10 12:41:09,302 - CRITICAL - server crashed - class.py - 30 - <module>
+2026-07-10 12:41:09,302 - WARNING - Console warning - class.py - 57 - <module>
+2026-07-10 12:41:09,303 - ERROR - Employee id already exists. - class.py - 84 - Employee

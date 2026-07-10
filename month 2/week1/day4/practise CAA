@@ -1,0 +1,13 @@
+class Patient():
+    def __init__(self,name,disease):
+        self.name=name
+        self.disease=disease
+
+class Doctor():
+    def __init__(self,name,specialization):
+        self.name=name
+        self.specialization=specialization
+        
+    def consult(self,patient):
+        print(self.name, 'is consulting',patient.name,'for',patient.disease)
+        
