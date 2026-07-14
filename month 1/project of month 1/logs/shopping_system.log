@@ -1,0 +1,95 @@
+2026-07-14 16:16:14,706 | ERROR | csv.py | create_files | module 'csv' has no attribute 'writer'
+Traceback (most recent call last):
+  File "c:\Gurman\StartAppss\Python internship backend\month 1\project of month 1\Shopping Management System\csv.py", line 77, in create_files
+    writer = csv.writer(file)
+AttributeError: module 'csv' has no attribute 'writer'
+2026-07-14 16:17:54,645 | ERROR | csv.py | create_files | module 'csv' has no attribute 'writer'
+Traceback (most recent call last):
+  File "c:\Gurman\StartAppss\Python internship backend\month 1\project of month 1\Shopping Management System\csv.py", line 77, in create_files
+    writer = csv.writer(file)
+AttributeError: module 'csv' has no attribute 'writer'
+2026-07-14 16:19:53,604 | INFO | csv_manager.py | create_files | data\orders.csv created.
+2026-07-14 16:19:53,605 | INFO | csv_manager.py | append_row | Data inserted into data\users.csv
+2026-07-14 16:19:53,605 | INFO | auth.py | create_default_admin | Default Admin Created.
+2026-07-14 16:20:08,410 | WARNING | auth.py | login | Invalid Username or Password.
+2026-07-14 16:20:08,410 | INFO | auth.py | login | Login Attempt Completed.
+2026-07-14 16:20:18,018 | WARNING | auth.py | login | Invalid Username or Password.
+2026-07-14 16:20:18,018 | INFO | auth.py | login | Login Attempt Completed.
+2026-07-14 16:37:26,070 | INFO | csv_manager.py | append_row | Data inserted into data\users.csv
+2026-07-14 16:37:26,070 | INFO | auth.py | create_default_admin | Default Admin Created.
+2026-07-14 16:37:32,573 | INFO | auth.py | login | Login Attempt Completed.
+2026-07-14 16:37:49,683 | ERROR | auth.py | login | 'username'
+Traceback (most recent call last):
+  File "c:\Gurman\StartAppss\Python internship backend\month 1\project of month 1\Shopping Management System\auth.py", line 195, in login
+    user["username"] == username
+KeyError: 'username'
+2026-07-14 16:37:49,685 | INFO | auth.py | login | Login Attempt Completed.
+2026-07-14 16:37:56,208 | ERROR | auth.py | create_default_admin | 'role'
+Traceback (most recent call last):
+  File "c:\Gurman\StartAppss\Python internship backend\month 1\project of month 1\Shopping Management System\auth.py", line 39, in create_default_admin
+    if user["role"] == "admin":
+KeyError: 'role'
+2026-07-14 16:38:02,313 | INFO | auth.py | login | Login Attempt Completed.
+2026-07-14 16:38:12,690 | ERROR | auth.py | login | 'username'
+Traceback (most recent call last):
+  File "c:\Gurman\StartAppss\Python internship backend\month 1\project of month 1\Shopping Management System\auth.py", line 195, in login
+    user["username"] == username
+KeyError: 'username'
+2026-07-14 16:38:12,691 | INFO | auth.py | login | Login Attempt Completed.
+2026-07-14 16:38:20,512 | ERROR | auth.py | create_default_admin | 'role'
+Traceback (most recent call last):
+  File "c:\Gurman\StartAppss\Python internship backend\month 1\project of month 1\Shopping Management System\auth.py", line 39, in create_default_admin
+    if user["role"] == "admin":
+KeyError: 'role'
+2026-07-14 16:43:24,357 | ERROR | auth.py | create_default_admin | 'role'
+Traceback (most recent call last):
+  File "c:\Gurman\StartAppss\Python internship backend\month 1\project of month 1\Shopping Management System\auth.py", line 30, in create_default_admin
+    if user["role"] == "admin":
+KeyError: 'role'
+2026-07-14 16:43:38,729 | ERROR | auth.py | login | 'username'
+Traceback (most recent call last):
+  File "c:\Gurman\StartAppss\Python internship backend\month 1\project of month 1\Shopping Management System\auth.py", line 189, in login
+    user["username"] == username
+KeyError: 'username'
+2026-07-14 16:43:38,729 | INFO | auth.py | login | Login Attempt Completed.
+2026-07-14 16:43:47,086 | INFO | auth.py | login | Login Attempt Completed.
+2026-07-14 16:44:21,253 | ERROR | auth.py | register_customer | 'username'
+Traceback (most recent call last):
+  File "c:\Gurman\StartAppss\Python internship backend\month 1\project of month 1\Shopping Management System\auth.py", line 121, in register_customer
+    self.username_exists(username)
+  File "c:\Gurman\StartAppss\Python internship backend\month 1\project of month 1\Shopping Management System\auth.py", line 91, in username_exists
+    if user["username"] == username:
+KeyError: 'username'
+2026-07-14 16:44:21,253 | INFO | auth.py | register_customer | Customer Registration Attempt Completed.
+2026-07-14 16:45:59,384 | ERROR | auth.py | create_default_admin | 'role'
+Traceback (most recent call last):
+  File "c:\Gurman\StartAppss\Python internship backend\month 1\project of month 1\Shopping Management System\auth.py", line 30, in create_default_admin
+    if user["role"] == "admin":
+KeyError: 'role'
+2026-07-14 16:56:16,228 | INFO | CSV Files Created
+2026-07-14 16:56:17,329 | INFO | CSV Files Created
+2026-07-14 16:56:19,135 | INFO | CSV Files Created
+2026-07-14 17:17:57,213 | INFO | CSV Files Created
+2026-07-14 17:17:57,224 | INFO | Default Admin Created.
+2026-07-14 17:18:52,224 | INFO | Customer Registered : gurman
+2026-07-14 17:19:02,815 | INFO | gurman logged in successfully.
+2026-07-14 17:19:17,840 | INFO | gurman browsed products.
+2026-07-14 17:19:24,215 | INFO | gurman browsed products.
+2026-07-14 17:19:25,022 | INFO | gurman searched products.
+2026-07-14 17:19:26,189 | INFO | gurman filtered products.
+2026-07-14 17:19:26,940 | INFO | gurman added product to cart.
+2026-07-14 17:19:27,902 | INFO | gurman removed product from cart.
+2026-07-14 17:19:28,369 | INFO | gurman viewed order history.
+2026-07-14 17:19:28,852 | INFO | gurman generated bill.
+2026-07-14 17:19:33,948 | INFO | User Logged Out.
+2026-07-14 17:38:53,372 | WARNING | Invalid Username or Password.
+2026-07-14 17:39:18,383 | WARNING | Invalid Username or Password.
+2026-07-14 17:39:24,276 | INFO | admin logged in successfully.
+2026-07-14 17:49:35,052 | INFO | CSV Files Created
+2026-07-14 17:50:12,130 | WARNING | Username already exists.
+2026-07-14 17:50:35,378 | WARNING | Email already exists.
+2026-07-14 17:51:00,467 | INFO | admin logged in successfully.
+2026-07-14 17:51:10,408 | INFO | admin viewed sellers.
+2026-07-14 17:52:32,221 | INFO | CSV Files Created
+2026-07-14 17:52:42,600 | INFO | admin logged in successfully.
+2026-07-14 17:52:55,348 | INFO | admin viewed sellers.

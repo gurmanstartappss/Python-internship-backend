@@ -1,0 +1,135 @@
+classes
+
+User
+Admin
+Seller
+Customer
+Product
+Cart
+Order
+OrderItem
+Authentication
+CSVManager
+Logger
+
+                    User (ABC)
+                   /     |      \
+                  /      |       \
+             Admin    Seller   Customer(id name email password)
+
+
+User attrs:-
+id
+name
+email
+password
+role
+
+Methods
+
+display_profile()
+verify_password()
+change_password()
+logout()
+
+Admin Methods
+
+add_seller()
+remove_seller()
+view_customers()
+view_orders()
+generate_reports()
+
+Seller Methods
+
+add_product()
+delete_product()
+update_stock()
+view_sales()
+
+Customer Methods
+
+browse_products()
+search_products()
+add_to_cart()
+remove_from_cart()
+place_order()
+view_order_history()
+
+Product class Attributes
+
+id
+name
+price
+stock
+category
+seller_id
+
+Methods
+
+update_stock()
+display()
+
+Cart attrs products
+
+Methods
+add()
+remove()
+total()
+clear()
+
+Order attrs
+order_id
+customer
+products
+date
+bill
+
+
+shopping_system
+│
+├── main.py
+│
+├── user.py
+├── admin.py
+├── seller.py
+├── customer.py
+│
+├── auth.py
+├── csv_manager.py
+├── logger.py
+│
+├── product.py
+├── cart.py
+├── order.py
+│
+├── exceptions.py
+│
+└── data/
+
+
+
+START
+ │
+ ▼
+Main Menu
+ │
+ ├──────────────┬──────────────┬──────────────┐
+ ▼              ▼              ▼              ▼
+Admin       Seller        Customer         Exit
+ │              │              │
+ ▼              ▼              ▼
+Login      Register/Login Register/Login
+ │              │              │
+ ▼              ▼              ▼
+Authentication (hashlib)
+ │
+ ▼
+CSV Verification
+ │
+ ├───────────────┐
+ ▼               ▼
+Success        Failure
+ │               │
+ ▼               ▼
+Dashboard    Try Again
