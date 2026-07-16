@@ -3,10 +3,6 @@ from auth import AuthenticationService
 auth = AuthenticationService()
 
 
-# -----------------------------
-# Admin Dashboard
-# -----------------------------
-
 def admin_dashboard(admin):
 
     while True:
@@ -38,10 +34,6 @@ def admin_dashboard(admin):
             print("Invalid Choice")
 
 
-# -----------------------------
-# Seller Dashboard
-# -----------------------------
-
 def seller_dashboard(seller):
 
     while True:
@@ -67,9 +59,6 @@ def seller_dashboard(seller):
             print("Invalid Choice")
 
 
-# -----------------------------
-# Customer Dashboard
-# -----------------------------
 
 def customer_dashboard(customer):
 
@@ -91,10 +80,6 @@ def customer_dashboard(customer):
             print("Invalid Choice")
 
 
-# -----------------------------
-# Main Menu
-# -----------------------------
-
 while True:
 
     print("\n===================================")
@@ -108,18 +93,11 @@ while True:
 
     choice = input("\nEnter Choice : ")
 
-    # -----------------------------
-    # Admin
-    # -----------------------------
 
     if choice == "1":
         admin = auth.login("admin")
         if admin:
             admin_dashboard(admin)
-
-    # -----------------------------
-    # Seller
-    # -----------------------------
 
     elif choice == "2":
 
@@ -141,9 +119,7 @@ while True:
             else:
                 print("Invalid Choice")
 
-    # -----------------------------
-    # Customer
-    # -----------------------------
+
 
     elif choice == "3":
 

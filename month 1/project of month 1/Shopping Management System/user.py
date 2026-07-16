@@ -45,17 +45,11 @@ class User(ABC):
 
         self.__password_hash = password_hash
 
-    # ----------------------------------------
-    # USER ID
-    # ----------------------------------------
 
     @property
     def user_id(self):
         return self._user_id
 
-    # ----------------------------------------
-    # USERNAME
-    # ----------------------------------------
 
     @property
     def username(self):
@@ -71,9 +65,6 @@ class User(ABC):
 
         self._username = value
 
-    # ----------------------------------------
-    # NAME
-    # ----------------------------------------
 
     @property
     def name(self):
@@ -89,9 +80,6 @@ class User(ABC):
 
         self._name = value
 
-    # ----------------------------------------
-    # EMAIL
-    # ----------------------------------------
 
     @property
     def email(self):
@@ -115,9 +103,7 @@ class User(ABC):
 
         self._email = value
 
-    # ----------------------------------------
-    # ROLE
-    # ----------------------------------------
+
 
     @property
     def role(self):
@@ -139,9 +125,7 @@ class User(ABC):
 
         self._role = value
 
-    # ----------------------------------------
-    # PASSWORD
-    # ----------------------------------------
+
 
     def verify_password(self, entered_hash):
 
@@ -181,9 +165,6 @@ class User(ABC):
             f"{self.username} changed password."
         )
 
-    # ----------------------------------------
-    # PROFILE
-    # ----------------------------------------
 
     def display_profile(self):
 
@@ -197,9 +178,7 @@ class User(ABC):
 
         print("=============================\n")
 
-    # ----------------------------------------
-    # MAGIC METHODS
-    # ----------------------------------------
+
 
     def __str__(self):
 
@@ -226,9 +205,7 @@ class User(ABC):
 
         return self.user_id == other.user_id
 
-    # ----------------------------------------
-    # ABSTRACT METHOD
-    # ----------------------------------------
+
 
     @abstractmethod
     def show_menu(self):
