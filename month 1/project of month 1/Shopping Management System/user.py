@@ -1,8 +1,3 @@
-"""
-user.py
-
-Base User Class
-"""
 
 from abc import ABC, abstractmethod
 import hashlib
