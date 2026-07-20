@@ -1,43 +1,79 @@
-from logger_config import logger
-import logging
-import hashlib
 import csv
+import hashlib
+from logger_config import logger
+
+USER_FILE = "users.csv"
+
+
+def hash_password(password):
+    return hashlib.sha256(password.encode()).hexdigest()
+
 
 def registration(role):
-    value = False
-    fieldname=["Role","Username","Password"]
-    user=input("enter your username ")
-    password=input("enter your password ")
-    hash_password=hashlib.sha256(password.encode()).hexdigest()
-    with open("admin.csv","a+",newline="") as file:
-        write=csv.DictWriter(file,fieldnames=fieldname)
+
+    username = input("Enter Username : ").strip()
+
+    password = input("Enter Password : ")
+
+    with open(USER_FILE, "a+", newline="") as file:
+
         file.seek(0)
-        reader=csv.DictReader(file)
+
+        reader = csv.DictReader(file)
+
         for row in reader:
-            if row["Username"]==user:
-                print("User Already Exists ")
-                logging.info("User Already Exists")  
-                value = True
-                break
-        if not value:
-            if file.tell()==0:
-                write.writeheader()
-            write.writerow({"Role":role,"Username":user,"Password":hash_password})
-            print("Registration Successful")
-            logging.info("Registration Successful")
-            
+
+            if row["Username"] == username:
+
+                print("User Already Exists")
+
+                logger.warning("Duplicate Username")
+
+                return
+
+        fieldnames = ["Role", "Username", "Password"]
+
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+
+        if file.tell() == 0:
+
+            writer.writeheader()
+
+        writer.writerow({
+            "Role": role,
+            "Username": username,
+            "Password": hash_password(password)
+        })
+
+    logger.info(f"{username} Registered")
+
+    print("Registration Successful")
+
+
 def login(role):
-    user=input("enter your username ")
-    password=input("enter your password ")
-    hash_password=hashlib.sha256(password.encode()).hexdigest()
-    with open("admin.csv","r",newline="") as file:
-        read=csv.DictReader(file)
-        for row in read:
-            if row["Role"]==role and row["Username"]==user and row["Password"]==hash_password:
-                print("Logged in Successfully")
-                logging.info("user logged in successfully")
-                return True
-        else:
-            print("login Unsuccessful")
-            logging.error("login Unsuccessful")
-            return False
+
+    username = input("Enter Username : ")
+
+    password = input("Enter Password : ")
+
+    with open(USER_FILE, "r", newline="") as file:
+
+        reader = csv.DictReader(file)
+
+        for row in reader:
+
+            if (row["Role"] == role and
+                    row["Username"] == username and
+                    row["Password"] == hash_password(password)):
+
+                logger.info(f"{username} Logged In")
+
+                print("Login Successful")
+
+                return username
+
+    print("Invalid Username or Password")
+
+    logger.warning("Login Failed")
+
+    return None

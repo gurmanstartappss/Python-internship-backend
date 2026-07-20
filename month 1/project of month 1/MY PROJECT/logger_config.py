@@ -1,8 +1,9 @@
 import logging
+
 logging.basicConfig(
-    filename=" main_log.log",
+    filename="main_log.log",
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-logger = logging.getLogger()
+logger = logging.getLogger(__name__)

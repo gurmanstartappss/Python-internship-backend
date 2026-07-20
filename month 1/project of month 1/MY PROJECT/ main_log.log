@@ -31,3 +31,6 @@
 2026-07-15 16:18:35,875 - INFO - App Exited
 2026-07-15 16:18:36,723 - INFO - App Exited
 2026-07-16 12:07:03,643 - INFO - user logged in successfully
+2026-07-20 10:29:43,414 - ERROR - invalid literal for int() with base 10: ''
+2026-07-20 10:29:53,961 - INFO - User Already Exists
+2026-07-20 10:30:02,032 - INFO - user logged in successfully

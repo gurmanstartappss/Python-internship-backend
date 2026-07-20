@@ -1,65 +1,107 @@
 import auth
-import customer
 import seller
-import logger_config
-import logging
+import customer
 
-print("======================Welcome to Student Management System=========================")
-while True:
-    print("Who are you? \n1) SELLER \n2) CUSTOMER \n3) EXIT")
+from logger_config import logger
+
+
+def get_choice(msg):
+
     while True:
-        try:
-            n=int(input("enter your choice "))
-            break
-        except Exception as e:
-            print("Enter Only Numbers ")
-            logging.error(e)
-    if n==1:
-        while True:
-            print("Do you want to:- \n1) Register \n2) Login \n3) EXIT ")
-            while True:
-                try:
-                    y=int(input("enter your choice "))
-                    break
-                except Exception as e:
-                    print("Enter Only Numbers ")
-                    logging.error(e)
-            if y==1:
-                auth.registration("SELLER")
-            elif y==2:
-                if auth.login("SELLER"):
-                    seller.Sel()
-            elif y==3:
-                print("App Exited")
-                logging.info("App Exited")
-                break
-            else:
-                print("enter valid choice")                    
 
-    elif n==2:
+        try:
+
+            return int(input(msg))
+
+        except ValueError:
+
+            print("Enter Numbers Only")
+
+
+while True:
+
+    print("\n========== ONLINE SHOPPING SYSTEM ==========")
+
+    print("1. Seller")
+
+    print("2. Customer")
+
+    print("3. Exit")
+
+    choice = get_choice("Enter Choice : ")
+
+    if choice == 1:
+
         while True:
-            print("Do you want to:- \n1) Register \n2) Login \n3) EXIT ")
-            while True:
-                try:
-                    y=int(input("enter your choice "))
-                    break
-                except Exception as e:
-                    print("Enter Only Numbers ")
-                    logging.error(e)
-            if y==1:
-                auth.registration("CUSTOMER")
-            elif y==2:
-                if auth.login("CUSTOMER"):
-                    customer.Cus()
-            elif y==3:
-                print("App Exited")
-                logging.info("App Exited")
+
+            print("\n1.Register")
+
+            print("2.Login")
+
+            print("3.Back")
+
+            ch = get_choice("Enter Choice : ")
+
+            if ch == 1:
+
+                auth.registration("SELLER")
+
+            elif ch == 2:
+
+                username = auth.login("SELLER")
+
+                if username:
+
+                    seller.Sel(username)
+
+            elif ch == 3:
+
                 break
+
             else:
-                print("enter valid choice")   
-    elif n==3:
-        print("App Exited")
-        logging.info("App Exited")
+
+                print("Invalid Choice")
+
+    elif choice == 2:
+
+        while True:
+
+            print("\n1.Register")
+
+            print("2.Login")
+
+            print("3.Back")
+
+            ch = get_choice("Enter Choice : ")
+
+            if ch == 1:
+
+                auth.registration("CUSTOMER")
+
+            elif ch == 2:
+
+                username = auth.login("CUSTOMER")
+
+                if username:
+
+                    customer.Cus(username)
+
+            elif ch == 3:
+
+                break
+
+            else:
+
+                print("Invalid Choice")
+
+    elif choice == 3:
+
+        logger.info("Application Closed")
+
+        print("Thank You")
+
         break
+
     else:
-        print("enter valid choice")
+
+        print("Invalid Choice")

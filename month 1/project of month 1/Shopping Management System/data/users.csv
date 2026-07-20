@@ -1,3 +1,0 @@
-user_id,username,name,email,password_hash,role
-1000,admin,System Admin,admin@gmail.com,240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9,admin
-1001,gurman,gurman,gg@gmail.com,f91e52db3650a2b18b1eb99b7a717a5a2a8a17ccaf09eee71e5a325fde053206,seller
