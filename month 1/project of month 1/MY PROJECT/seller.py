@@ -3,7 +3,6 @@ from logger_config import logger
 
 PRODUCT_FILE = "products.csv"
 
-
 def initialize_file():
     try:
         with open(PRODUCT_FILE, "x", newline="") as file:
@@ -11,7 +10,6 @@ def initialize_file():
             writer.writerow(["ID", "Seller", "Product", "Price", "Quantity"])
     except FileExistsError:
         pass
-
 
 initialize_file()
 
@@ -65,16 +63,22 @@ def update_product(username):
         reader = csv.DictReader(file)
 
         for row in reader:
-
             if row["ID"] == pid and row["Seller"] == username:
 
-                row["Product"] = input("New Product Name : ")
-                row["Price"] = input("New Price : ")
-                row["Quantity"] = input("New Quantity : ")
+                product = input(f"Product Name [{row['Product']}]: ")
+                price = input(f"Price [{row['Price']}]: ")
+                quantity = input(f"Quantity [{row['Quantity']}]: ")
+
+                if product:
+                    row["Product"] = product
+
+                if price:
+                    row["Price"] = price
+
+                if quantity:
+                    row["Quantity"] = quantity
 
                 updated = True
-
-            rows.append(row)
 
     if updated:
 

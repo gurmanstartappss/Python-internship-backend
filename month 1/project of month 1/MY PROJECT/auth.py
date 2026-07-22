@@ -1,6 +1,7 @@
 import csv
 import hashlib
 from logger_config import logger
+import pwinput
 
 USER_FILE = "users.csv"
 
@@ -13,7 +14,7 @@ def registration(role):
 
     username = input("Enter Username : ").strip()
 
-    password = input("Enter Password : ")
+    password = pwinput.pwinput(prompt="Enter Password : ", mask="*")
 
     with open(USER_FILE, "a+", newline="") as file:
 
@@ -54,7 +55,7 @@ def login(role):
 
     username = input("Enter Username : ")
 
-    password = input("Enter Password : ")
+    password = pwinput.pwinput(prompt="Enter Password : ", mask="*")
 
     with open(USER_FILE, "r", newline="") as file:
 
