@@ -13,3 +13,41 @@
 2026-07-22 11:33:42,006 - WARNING - Duplicate Username
 2026-07-22 11:33:47,619 - WARNING - Login Failed
 2026-07-22 11:34:18,130 - WARNING - Duplicate Username
+2026-07-23 14:06:24,718 - WARNING - Login Failed
+2026-07-23 14:06:32,398 - WARNING - Login Failed
+2026-07-23 14:06:41,353 - INFO - gurman Registered
+2026-07-23 14:06:46,836 - INFO - gurman Logged In
+2026-07-23 14:06:58,440 - INFO - gurman added product 1
+2026-07-23 14:07:17,470 - INFO - gurman added product product
+2026-07-23 14:08:00,468 - INFO - gurman Logged In
+2026-07-23 14:08:37,305 - WARNING - Duplicate Username
+2026-07-23 14:08:42,390 - WARNING - Login Failed
+2026-07-23 14:09:07,550 - INFO - gurman Registered
+2026-07-23 14:09:15,038 - INFO - gurman Logged In
+2026-07-23 14:16:33,212 - WARNING - Login Failed
+2026-07-23 14:16:50,995 - INFO - gurman Registered
+2026-07-23 14:17:00,215 - INFO - gurman Logged In
+2026-07-23 14:19:53,090 - INFO - gurman Logged In
+2026-07-23 14:20:03,563 - INFO - gurman added soap
+2026-07-23 14:23:58,884 - INFO - gurman added soap
+2026-07-23 14:26:29,273 - WARNING - Login Failed
+2026-07-23 14:29:53,301 - WARNING - Login Failed
+2026-07-23 14:30:08,101 - INFO - gurman Logged In
+2026-07-23 14:30:56,371 - INFO - gurman Registered
+2026-07-23 14:31:09,373 - INFO - gurman Logged In
+2026-07-23 14:31:16,353 - INFO - gurman added product soap
+2026-07-23 14:31:34,214 - INFO - gurman updated product 1
+2026-07-23 14:34:59,090 - INFO - gurman logged in.
+2026-07-23 14:35:06,630 - INFO - gurman deleted product 1
+2026-07-23 14:35:14,055 - INFO - gurman added product soap
+2026-07-23 14:37:36,482 - INFO - gurman logged in.
+2026-07-23 14:37:50,672 - INFO - gurman updated product 1
+2026-07-23 14:38:11,319 - WARNING - Duplicate username: gurman
+2026-07-23 14:38:18,446 - WARNING - Failed login attempt for gurman
+2026-07-23 14:38:26,680 - WARNING - Failed login attempt for gurman
+2026-07-23 14:38:51,113 - INFO - hi registered as CUSTOMER
+2026-07-23 14:38:55,168 - INFO - hi logged in.
+2026-07-23 14:47:39,931 - INFO - hi logged in.
+2026-07-23 14:47:53,780 - INFO - hi logged in.
+2026-07-23 14:49:01,210 - INFO - hi placed an order
+2026-07-23 14:49:28,118 - INFO - gurman logged in.

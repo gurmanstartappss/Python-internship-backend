@@ -3,6 +3,7 @@ from logger_config import logger
 
 PRODUCT_FILE = "products.csv"
 
+
 def initialize_file():
     try:
         with open(PRODUCT_FILE, "x", newline="") as file:
@@ -10,6 +11,7 @@ def initialize_file():
             writer.writerow(["ID", "Seller", "Product", "Price", "Quantity"])
     except FileExistsError:
         pass
+
 
 initialize_file()
 
@@ -63,22 +65,27 @@ def update_product(username):
         reader = csv.DictReader(file)
 
         for row in reader:
+
             if row["ID"] == pid and row["Seller"] == username:
 
-                product = input(f"Product Name [{row['Product']}]: ")
-                price = input(f"Price [{row['Price']}]: ")
-                quantity = input(f"Quantity [{row['Quantity']}]: ")
+                print("\nPress Enter to keep the current value.\n")
 
-                if product:
-                    row["Product"] = product
+                new_name = input(f"Product Name ({row['Product']}): ").strip()
+                new_price = input(f"Price ({row['Price']}): ").strip()
+                new_quantity = input(f"Quantity ({row['Quantity']}): ").strip()
 
-                if price:
-                    row["Price"] = price
+                if new_name:
+                    row["Product"] = new_name
 
-                if quantity:
-                    row["Quantity"] = quantity
+                if new_price:
+                    row["Price"] = new_price
+
+                if new_quantity:
+                    row["Quantity"] = new_quantity
 
                 updated = True
+
+            rows.append(row)
 
     if updated:
 
@@ -89,7 +96,6 @@ def update_product(username):
             writer = csv.DictWriter(file, fieldnames=fieldnames)
 
             writer.writeheader()
-
             writer.writerows(rows)
 
         print("Product Updated Successfully")

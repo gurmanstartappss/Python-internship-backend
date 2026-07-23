@@ -27,11 +27,6 @@ def initialize_files():
 
 
 initialize_files()
-
-
-# ---------------------------------------------------
-# View Products
-# ---------------------------------------------------
 def view_products():
 
     with open(PRODUCT_FILE, "r", newline="") as file:
@@ -40,23 +35,10 @@ def view_products():
 
         print("\nID\tProduct\tPrice\tQty")
 
-        found = False
-
         for row in reader:
 
-            found = True
+            print(f'{row["ID"]}\t{row["Product"]}\t₹{row["Price"]}\t{row["Quantity"]}')
 
-            print(
-                f'{row["ID"]}\t{row["Product"]}\t₹{row["Price"]}\t{row["Quantity"]}'
-            )
-
-        if not found:
-            print("No Products Available")
-
-
-# ---------------------------------------------------
-# Search Product
-# ---------------------------------------------------
 def search_product():
 
     name = input("Enter Product Name : ").lower()
@@ -73,20 +55,18 @@ def search_product():
 
                 found = True
 
-                print(
-                    f'{row["ID"]} | {row["Product"]} | ₹{row["Price"]} | Qty:{row["Quantity"]}'
-                )
+                print(f'{row["ID"]}\t{row["Product"]}\t₹{row["Price"]}')
 
         if not found:
+
             print("Product Not Found")
 
 
-# ---------------------------------------------------
-# Add To Cart
-# ---------------------------------------------------
 def add_to_cart(username):
 
     pid = input("Enter Product ID : ")
+
+    qty = int(input("Enter Quantity : "))
 
     with open(PRODUCT_FILE, "r", newline="") as file:
 
@@ -96,9 +76,8 @@ def add_to_cart(username):
 
             if row["ID"] == pid:
 
-                qty = int(input("Enter Quantity : "))
-
                 if qty > int(row["Quantity"]):
+
                     print("Not Enough Stock")
                     return
 
@@ -108,22 +87,18 @@ def add_to_cart(username):
 
                     writer.writerow([
                         username,
-                        row["ID"],
+                        pid,
                         row["Product"],
                         row["Price"],
                         qty
                     ])
 
-                print("Added To Cart")
-                logger.info(f"{username} added {row['Product']} to cart")
+                print("Product Added Successfully")
                 return
 
-    print("Invalid Product ID")
+    print("Product Not Found")
 
 
-# ---------------------------------------------------
-# View Cart
-# ---------------------------------------------------
 def view_cart(username):
 
     total = 0
@@ -159,10 +134,6 @@ def view_cart(username):
 
             print("Cart Empty")
 
-
-# ---------------------------------------------------
-# Remove Cart Item
-# ---------------------------------------------------
 def remove_cart(username):
 
     pid = input("Enter Product ID : ")
@@ -209,9 +180,6 @@ def remove_cart(username):
         print("Product Not In Cart")
 
 
-# ---------------------------------------------------
-# Place Order
-# ---------------------------------------------------
 def place_order(username):
 
     cart_items = []
@@ -312,9 +280,7 @@ def place_order(username):
     logger.info(f"{username} placed an order")
 
 
-# ---------------------------------------------------
-# View Orders
-# ---------------------------------------------------
+
 def view_orders(username):
 
     with open(ORDER_FILE, "r", newline="") as file:
@@ -338,52 +304,99 @@ def view_orders(username):
         if not found:
 
             print("No Orders Found")
-
-
-# ---------------------------------------------------
-# Customer Menu
-# ---------------------------------------------------
-def Cus(username):
+            
+def browse_products(username):
 
     while True:
 
-        print("\n========== CUSTOMER MENU ==========")
-
-        print("1. View Products")
+        print("\n1. View Products")
         print("2. Search Product")
         print("3. Add To Cart")
-        print("4. Remove From Cart")
-        print("5. View Cart")
-        print("6. Place Order")
-        print("7. View Orders")
-        print("8. Logout")
+        print("4. Back")
 
         choice = input("Enter Choice : ")
 
         if choice == "1":
+
             view_products()
 
         elif choice == "2":
+
             search_product()
 
         elif choice == "3":
+
             add_to_cart(username)
 
         elif choice == "4":
-            remove_cart(username)
 
-        elif choice == "5":
-            view_cart(username)
-
-        elif choice == "6":
-            place_order(username)
-
-        elif choice == "7":
-            view_orders(username)
-
-        elif choice == "8":
-            print("Logged Out Successfully")
             break
 
         else:
+
+            print("Invalid Choice")
+
+def cart_menu(username):
+
+    while True:
+
+        print("\n1. View Cart")
+        print("2. Remove Product")
+        print("3. Place Order")
+        print("4. Back")
+
+        choice = input("Enter Choice : ")
+
+        if choice == "1":
+
+            view_cart(username)
+
+        elif choice == "2":
+
+            remove_cart(username)
+
+        elif choice == "3":
+
+            place_order(username)
+
+        elif choice == "4":
+
+            break
+
+        else:
+
+            print("Invalid Choice")
+            
+            
+def Cus(username):
+
+    while True:
+
+        print("\n========== CUSTOMER ==========")
+        print("1. Products")
+        print("2. Cart")
+        print("3. Orders")
+        print("4. Logout")
+
+        choice = input("Enter Choice : ")
+
+        if choice == "1":
+
+            browse_products(username)
+
+        elif choice == "2":
+
+            cart_menu(username)
+
+        elif choice == "3":
+
+            view_orders(username)
+
+        elif choice == "4":
+
+            print("Logged Out")
+            break
+
+        else:
+
             print("Invalid Choice")

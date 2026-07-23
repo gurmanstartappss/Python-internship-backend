@@ -1,7 +1,8 @@
 import csv
 import hashlib
-from logger_config import logger
+import os
 import pwinput
+from logger_config import logger
 
 USER_FILE = "users.csv"
 
@@ -11,70 +12,86 @@ def hash_password(password):
 
 
 def registration(role):
+    username = input("Enter Username: ").strip()
 
-    username = input("Enter Username : ").strip()
+    password = pwinput.pwinput(
+        prompt="Enter Password: ",
+        mask="*"
+    )
 
-    password = pwinput.pwinput(prompt="Enter Password : ", mask="*")
+    fieldnames = ["Role", "Username", "Password"]
 
-    with open(USER_FILE, "a+", newline="") as file:
+    try:
+        # Create file with header if it doesn't exist or is empty
+        if not os.path.exists(USER_FILE) or os.path.getsize(USER_FILE) == 0:
+            with open(USER_FILE, "w", newline="") as file:
+                writer = csv.DictWriter(file, fieldnames=fieldnames)
+                writer.writeheader()
 
-        file.seek(0)
+        # Check if username already exists
+        with open(USER_FILE, "r", newline="") as file:
+            reader = csv.DictReader(file)
 
-        reader = csv.DictReader(file)
+            for row in reader:
+                if row["Username"].lower() == username.lower():
+                    print("User Already Exists.")
+                    logger.warning(f"Duplicate username: {username}")
+                    return
 
-        for row in reader:
+        # Save new user
+        with open(USER_FILE, "a", newline="") as file:
+            writer = csv.DictWriter(file, fieldnames=fieldnames)
 
-            if row["Username"] == username:
+            writer.writerow({
+                "Role": role,
+                "Username": username,
+                "Password": hash_password(password)
+            })
 
-                print("User Already Exists")
+        print("Registration Successful.")
+        logger.info(f"{username} registered as {role}")
 
-                logger.warning("Duplicate Username")
-
-                return
-
-        fieldnames = ["Role", "Username", "Password"]
-
-        writer = csv.DictWriter(file, fieldnames=fieldnames)
-
-        if file.tell() == 0:
-
-            writer.writeheader()
-
-        writer.writerow({
-            "Role": role,
-            "Username": username,
-            "Password": hash_password(password)
-        })
-
-    logger.info(f"{username} Registered")
-
-    print("Registration Successful")
+    except Exception as e:
+        print("Registration Failed.")
+        logger.exception(e)
 
 
 def login(role):
+    username = input("Enter Username: ").strip()
 
-    username = input("Enter Username : ")
+    password = pwinput.pwinput(
+        prompt="Enter Password: ",
+        mask="*"
+    )
 
-    password = pwinput.pwinput(prompt="Enter Password : ", mask="*")
+    try:
+        if not os.path.exists(USER_FILE):
+            print("No users registered.")
+            return None
 
-    with open(USER_FILE, "r", newline="") as file:
+        with open(USER_FILE, "r", newline="") as file:
 
-        reader = csv.DictReader(file)
+            reader = csv.DictReader(file)
 
-        for row in reader:
+            for row in reader:
 
-            if (row["Role"] == role and
-                    row["Username"] == username and
-                    row["Password"] == hash_password(password)):
+                if (
+                    row["Role"] == role
+                    and row["Username"] == username
+                    and row["Password"] == hash_password(password)
+                ):
 
-                logger.info(f"{username} Logged In")
+                    print("Login Successful.")
+                    logger.info(f"{username} logged in.")
 
-                print("Login Successful")
+                    return username
 
-                return username
+        print("Invalid Username or Password.")
+        logger.warning(f"Failed login attempt for {username}")
 
-    print("Invalid Username or Password")
+        return None
 
-    logger.warning("Login Failed")
-
-    return None
+    except Exception as e:
+        print("Login Failed.")
+        logger.exception(e)
+        return None
