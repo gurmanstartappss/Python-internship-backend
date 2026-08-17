@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(240, 233, 233);
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: rgb(236, 132, 72);
+}
+
+a {
+    display: block;
+    color: rgb(92, 61, 204);
+    margin: 10px;
+    font-size: 20px;
+}
+p {
+    display: block;
+    color: rgb(46, 202, 98);
+    margin: 10px;
+    font-size: 20px;
+}
+
+ul {
+    display: block;
+    color: rgb(46, 202, 98);
+    margin: 10px;
+    font-size: 20px;
+}

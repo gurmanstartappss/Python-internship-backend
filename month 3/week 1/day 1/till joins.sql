@@ -49,5 +49,5 @@ select e.name,e.salary,d.department_name from employee_details e right join depa
 select e.name,e.salary,d.department_name from employee_details e left join departments d on e.department_id=d.id;
 select e.name,e.salary,d.department_name from employee_details e join departments d on e.department_id=d.id;
 
--- group by= used with aggregate fucntions
+-- group by= used with aggregate functions
 -- having=conditions 

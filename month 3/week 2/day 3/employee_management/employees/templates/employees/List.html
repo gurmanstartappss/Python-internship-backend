@@ -1,0 +1,19 @@
+{%load static%}
+<!doctype html>
+<html>
+  <head>
+    <title>List </title>
+    <link rel="stylesheet" href="{%static 'employees/style.css'%}"
+  </head>
+  <body>
+    <h1> List of employees</h1>
+    <ul>
+      {% for emp,sal in employees.items %}
+        <li>Name : {{ emp }} | Salary: {{sal}}</li>
+      {% endfor %}
+    </ul><br>
+    <a href="{% url 'Home' %}">Home</a><br>
+    <a href="{% url 'Contact' %}">Contact Page</a><br>
+    <a href="{% url 'List' %}">List Page</a><br>
+  </body>
+</html>

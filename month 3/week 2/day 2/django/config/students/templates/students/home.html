@@ -1,0 +1,32 @@
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <title>MANAGEMENT</title>
+    <link rel="stylesheet" href="{% static 'students/style.css' %}">
+  </head>
+  <body>
+    <h1> Welcome to the Student management system </h1>
+    <h4>hello {{name}}</h4>
+    <h4>with {{course}}</h4>
+    <h4>Students list</h4>
+    <ul>{% for student in students %}
+        <li>{{student}}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
+
+{% comment %} 
+django template use {{variable}}
+
+if condition
+{% if is active %}
+        <p>Student is active</P>
+{% else %}
+        <p>Student is inactive</p>
+      
+  {% end if%} 
+{% endcomment %}
+
+“Django receives an HTTP request, routes it through urls.py to a view, where business logic and database operations happen, then renders a template if required and sends an HTTP response back to the client.”

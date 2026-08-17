@@ -1,0 +1,23 @@
+{% load static %}
+
+<!doctype html>
+<html>
+<head>
+    <title>Employees List</title>
+    <link rel="stylesheet" href="{% static 'employees/style.css' %}">
+</head>
+
+<body>
+    <a href="{% url 'create' %}">Create Employee </a>
+    {% for stu in employees %}
+        <div>
+            <p>{{ stu.name }}</p>
+            <p>{{ stu.email }}</p>
+            <p>{{ stu.age }}</p>
+            <p>{{ stu.city }}</p>
+            <p>{{ stu.branch }}</p>
+        </div>
+    {% endfor %}
+
+</body>
+</html>
