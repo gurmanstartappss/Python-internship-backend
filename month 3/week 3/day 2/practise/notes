@@ -1,0 +1,4 @@
+pip install virtualenvwrapper-win
+mkvirtualenv envname
+mkdir projects=creates a folder named projects
+django-admin startproject projectname

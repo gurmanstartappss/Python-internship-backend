@@ -1,0 +1,16 @@
+{%load static%}
+<!doctype html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{%static 'employees/style.css'%}"
+  </head>
+  <body>
+    <h1> Welcome to the Home page  </h1>
+    <a href="{% url 'About' %}">About Page</a><br>
+    <a href="{% url 'Contact' %}">Contact Page</a><br>
+    <a href="{% url 'List' %}">List Page</a><br>
+    <a href="{% url 'employees_list' %}">Employees list Page</a><br>
+
+  </body>
+</html>

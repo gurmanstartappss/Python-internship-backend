@@ -1,0 +1,20 @@
+{%load static%}
+<!doctype html>
+<html>
+  <head>
+    <title>About </title>
+    <link rel="stylesheet" href="{%static 'employees/style.css'%}"
+  </head>
+  <body>
+    <h1> Welcome to the About page  </h1>
+    <P>Employee name : {{ emp_name }}</P>
+    <P>Department name : {{ dept_name  }}</P>
+    <P>Age : {{ age }}</P>
+    <P>City : {{ city }}</P>
+    <P>Branch : {{ branch }}</P><br>
+    <a href="{% url 'Home' %}">Home</a><br>
+    <a href="{% url 'Contact' %}">Contact Page</a><br>
+    <a href="{% url 'List' %}">List Page</a><br>
+    <a href="{% url 'employees_list' %}">Employees list Page</a><br>
+  </body>
+</html>

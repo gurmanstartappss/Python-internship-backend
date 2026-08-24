@@ -1,0 +1,28 @@
+FastAPI:
+used for:
+Rest API
+backend services
+microservices
+high performance APIs
+Automatic API Documentation
+
+FastAPI: internally used two library: Starlette(Web Functionality) and pydantic(data validation)
+
+                    FastAPI              Django
+performance         Very High            Average
+ORM                 no                   django ORM
+Admin Panel         no                   yes
+Api documentation   yes                  no
+
+2 types of server:-
+uvicorn(FastApi) and gunicorn(Django)wsgi
+
+asgi=asynchronous server gateway interface
+wsgi=webserver gateway  interface
+
+to run the uvicorn= uvicorn app.Main:app --reload
+
+path parameters=used for identifying resource
+and query parameters=used for filtering,searching,sorting,pagination
+
+pydantic
