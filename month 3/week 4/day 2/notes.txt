@@ -1,0 +1,21 @@
+now created users.py in schema and imported pydantic
+and then created custom fields used for validation
+like:===
+name:str =Field(min_length=3,max_length=50,description="Employee Fullname")
+
+validators:use for custom validation or transformation of data
+
+
+#Field: predefined validation rules
+#Validator: custom validation rules
+
+nested pydantic model
+configdict parameters in fastapi
+
+pydantic v2(configdict)
+regex(patterns)
+
+“Design schema with nested model and name, skills = multiple skills of one employee, all with proper validations.”
+
+THEN TO IGNORE .ENV FILE:=
+create a config.py file

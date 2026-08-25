@@ -25,4 +25,4 @@ to run the uvicorn= uvicorn app.Main:app --reload
 path parameters=used for identifying resource
 and query parameters=used for filtering,searching,sorting,pagination
 
-pydantic
+pydantic lib and startlettee lib
