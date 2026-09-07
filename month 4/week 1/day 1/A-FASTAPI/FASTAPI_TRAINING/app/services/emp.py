@@ -1,0 +1,37 @@
+from fastapi import HTTPException,status
+from typing import List
+from sqlalchemy.orm import Session
+from app.models.emp import Employee
+from app.repository.emp import employeeRepository
+from app.schemas.emp import (EmployeeCreate,EmployeeResponse,EmployeeUpdate)
+
+
+class EmployeeService:
+    def __init__(self,repository:employeeRepository):
+        self.repository = repository
+
+    def create_employee(self,db:Session,data:EmployeeCreate) -> Employee:
+        existing_employee = self.repository.get_by_email(db,data.email)
+
+        if existing_employee:
+            raise HTTPException(status_code=status.HTTP_409_CONFLICT,detail="Employee with this email already exists")
+        
+        employee=Employee(name=data.name,
+                        email=data.email,
+                        salary=data.salary,)
+        return self.repository.creat(db,employee)
+    
+    def get_all_employee(self,db:Session,) -> List[Employee]:
+        return self.repository.get_all(db)
+
+    def get_employee(self,db:Session,employee_id:int) -> Employee:
+        existing_employee = self.repository.get_by_id(db,employee_id)
+
+        if not existing_employee:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Employee with this id does not exist"
+            )
+
+emp_repo=employeeRepository()
+emp_service=EmployeeService(emp_repo)
