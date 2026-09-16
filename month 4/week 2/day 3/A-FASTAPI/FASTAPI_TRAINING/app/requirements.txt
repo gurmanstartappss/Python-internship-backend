@@ -1,0 +1,8 @@
+fastapi 
+uvicorn
+sqlalchemy
+pydantic
+pydantic-settings
+pyjwt
+PWdlib[argon2]
+python-multipart

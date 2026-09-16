@@ -1,0 +1,13 @@
+#OAuth2 password Bearer: it is a FastAPI security schema where the client
+# obtains an access token and sends it using the HTTP Bearer Authorization header.
+
+# its helps extract the bearer token from incoming
+# requests and integrate it with the OAuth2 security flow
+
+# RBAC : role based access control (RBAC) controls access to aapis or resources based on the user's assigned
+instead of giving permissions individually to every user, we assign permissions to roles such as admin hr and employee
+
+# application uses a bearer token and the client can obtain that token from /auth/login
+oauth2_scheme = OAuth2PasswordBearer(
+    tokenUrl="/auth/login"
+)

@@ -1,0 +1,39 @@
+(async.py)
+
+event loop :- it is the central mechanism that schedules and runs asynchronous tasks, when one task is waiting for I/O, the event loop can run another ready task
+
+A coroutine is a special function that can pause its execution and resume later.In Python, coroutines are commonly created using async def and run with await.
+
+AsyncIo library: built in python lib--event loop, coroutine, task, await, gather(), create_task(), lock, queue
+
+Blocking and Non-Blocking: blocking code stop the current thread from doing other work.
+inside an async application, blocking code can prevent the event loop from serving other tasks.
+
+time.sleep(5) // task block
+await asyncio.sleep(5)
+create tasks()
+
+create_task():               gather():
+create individual task       runs multiple awaitables
+gives task reference         collects result
+
+
+(example.py)
+httpx: async HTTP client
+HTTPX provides an asynchronous HTTP client through AsyncClient. It allows FastAPI applications to make non-blocking HTTP requests.
+
+(raceconditions.py):=======
+Thread 1: +1 → read counter = 0
+          +1
+
+Thread 2: +1 → read counter = 0
+          +1
+
+Thread 1: write = 1
+Thread 2: write = 1
+
+Expected = 2
+Actual   = 1
+
+race conditions and locking to prevent race conditions
+thread.lock: a lock protects shared mutable state by allowing only one thread into a critical section at a time
