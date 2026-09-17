@@ -1,0 +1,92 @@
+Twitter Project
+
+python -m venv env---------------create env
+env/scripts/activate-------------activate env
+pip install Django---------------install Django
+pip freeze > requirements.txt----freeze pip and create txt having requirements
+pip install -r requirements.txt--after project, all requirements updated in txt file
+django-admin startproject headq--created project named as headq
+cd headq-------------------------going into headq folder
+
+→ Database setup: create migration files, apply them to DB, and create admin user.
+python manage.py makemigrations---create migration files for model/database changes
+python manage.py migrate----------apply migrations to the database
+python manage.py createsuperuser--create an admin/superuser account
+
+_______________________________________________________________________________________________________________
+
+python -m pip install Pillow------for using image field we need to install this
+
+(headq/settings.py)import os-------------------------for media config
+(headq/settings.py)MEDIA_URL = '/media/'
+(headq/settings.py)MEDIA_ROOT = os.path.join(BASE_DIR, 'media')----- for media path
+
+create a static folder in headq(outer headq)
+(headq/settings.py)STATIC_URL = 'static/'
+(headq/settings.py)STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]---for static data
+
+(headq/urls.py)from django.conf import settings----------------import settings.py
+(headq/urls.py)from django.conf.urls.static import static------import the static from settings.py to urls.py
+(headq/urls.py)urlpatterns[] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)-----adds static urls 
+____________________________________________________________________________________________________________________
+
+python manage.py startapp tweet------create an app tweet
+(settings.py)add app in installed apps 
+____________________________________________________________________________________________________________________
+
+(tweet/views.py)
+from Django.shortcuts import render
+def index(request):
+    return render(request,'index.html')--------created a view and rendered index.html
+____________________________________________________________________________________________________________________
+
+(tweet/urls.py)---------next import full view.py in urls.py
+from django.urls import path---------must have for path
+from . import views------------------importing full views.py
+urlpatterns = [
+    path('', views.index,name='index'),
+]
+____________________________________________________________________________________________________________________
+
+(settings.py) in templates>'DIRS' we need to join os path
+'DIRS': [os.path.join(BASE_DIR, 'templates')],
+
+____________________________________________________________________________________________________________________
+
+then in the app tweet create a folder named templates and add a basic template
+(tweet/templates/index.html)
+{% extends 'layout.html' %}---------------extends the layout.html to index.html using bootstrap
+
+{% block title %}
+Tweet
+{% endblock %}
+
+{% block content %}
+
+<h1>Welcome to Django Project</h1>
+
+{% endblock %}----------------------------using unnamed blocks
+_______________________________________________________________________________________________________________
+(headq/urls.py)------------
+from django.urls import path,include----------include imports the app which is mentioned in settings.py
+path('tweet/', include('tweet.urls')),---------include>tweet>urls.py
+____________________________________________________________________________________________________________________
+
+create templates in outer headq and
+(headq/templates/layout.html 
+{% load static %}-----------at top (standard practice to load static)
+simple boilerplate code and bootstrap for css and also a navbar from bootstrap
+
+____________________________________________________________________________________________________________________
+
+models:in tweet app open models 
+
+
+
+
+
+
+
+
+
+

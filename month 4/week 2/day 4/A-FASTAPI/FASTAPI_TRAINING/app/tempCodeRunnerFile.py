@@ -1,0 +1,2 @@
+I")
+class CardPayment(Payment):
