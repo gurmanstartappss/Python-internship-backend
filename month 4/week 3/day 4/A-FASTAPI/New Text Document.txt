@@ -1,0 +1,39 @@
+singleton.py
+
+when to use singleton
+database connection manager
+application configuration 
+connection pool
+___________________________________________
+payments.py
+
+factory method:
+use 
+multiple implementations
+object creation complex
+create object at runtime
+___________________________________________
+strategy patterns
+it defines multiple algorithms or behaviours, encapsulates each onne seperately and alllows them to be switched at runtime
+
+use:
+payments
+shipping
+tax calculation
+notification
+authentication
+
+
+Stateless vs Stateful
+
+The easiest way to remember:
+
+Stateless = doesn't remember previous requests
+Stateful = remembers previous requests
+
+Feature	                        Stateless	Stateful
+Remembers client information?	No	        Yes
+Each request independent?	    Yes	        No
+Server stores session/state?	Usually no	Yes
+Simpler to scale?	            Yes	        More difficult
+Example	                        REST API	Online shopping session

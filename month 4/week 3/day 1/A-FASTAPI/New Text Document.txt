@@ -1,0 +1,44 @@
+============================================================
+
+Docker:
+
+Docker is a tool that packages an application and its dependencies into a container.
+It helps the application run consistently on different machines and environments.
+
+Dockerfile:
+
+A text file containing instructions to build a Docker image.
+It defines the application environment, dependencies, and startup command.
+
+Docker Image:
+
+A read-only package containing an application and everything needed to run it.
+It is the blueprint for creating containers.
+
+Container:
+
+A running instance of a Docker image.
+It provides an isolated environment where the application runs.
+
+Docker Engine:
+
+The core Docker technology that builds and runs containers.
+It manages containers, images, networks, and volumes.
+
+Docker CLI:
+
+docker build . -t fastapi-training
+
+docker run -d -p 8000:8000 fastapi-training
+
+Docker Compose:
+
+It is used to manage multiple Docker services and run all services
+like FastAPI, PostgreSQL, and Redis together.
+
+# Build Docker image
+docker build . -t fastapi-training
+
+# Run container
+docker run -d -p 8000:8000 fastapi-training
+

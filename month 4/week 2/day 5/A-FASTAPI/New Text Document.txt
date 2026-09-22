@@ -1,0 +1,10 @@
+idempotency.py
+
+Idempotency is a property of an operation where repeating the same request produces the same final effect as making the request once.
+It is especially important in payment APIs.
+
+_____________________________________________________
+builder.py
+
+_____________________________________________________
+adapter.py
