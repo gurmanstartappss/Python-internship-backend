@@ -1,0 +1,77 @@
+Idempotency:
+
+------------------------------------------------------------
+
+Docker Volume: A docker volume is a storage mechanism used to persist data outside the container's writable layer.
+It allows data to survive even when a container is removed or recreated.
+
+postgresQL_container -> database data
+
+# Two types of Storage:
+# 1. Named Volumes: postgres_data (persistent data)
+# 2. Bind Mounts: ./app (source_code) Container/app
+
+# Create volume
+docker volume create volume_data
+
+# Check volumes
+docker volume ls
+
+# Check running containers
+docker ps
+
+# Check all containers
+docker ps -a
+
+# Run PostgreSQL with volume
+docker run -d --name postgres-container \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_PASSWORD=postgres \
+  -e POSTGRES_DB=fastapi_db \
+  -p 5432:5432 \
+  -v postgres_data:/var/lib/postgresql/data \
+  postgres:16
+
+
+docker run -d --name database-container \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_PASSWORD=postgres \
+  -e POSTGRES_DB=fastapi_db \
+  -p 5432:5432 \
+  -v fastapi_volume:/var/lib/postgresql/data \
+  postgres:16
+
+# Test volume persistence
+docker exec -it database-container psql -U postgres -d fastapi_db
+
+
+# Create a network
+docker network create fastapi-network
+
+# Run PostgreSQL container on the network
+docker run -d \
+  --name database-container \
+  --network fastapi-network \
+  -e POSTGRES_PASSWORD=yourpassword \
+  -e POSTGRES_DB=fastapi_db \
+  -v postgres_data:/var/lib/postgresql/data \
+  postgres
+
+docker exec -it database-container psql -U postgres -d fastapi_db
+
+==============================================================
+
+Docker Network:
+A docker network allows containers to communicate with each other securely.it provide networking and service discovery between containers.
+
+FastAPI container:-
+
+postgresql container
+
+create docker network:
+
+docker network create <network-name>
+
+check:
+
+docker network ls

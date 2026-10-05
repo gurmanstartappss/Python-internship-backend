@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+pydantic-settings
+psycopg2
+PyJWT
+PyLib[argon2]
+python-multipart

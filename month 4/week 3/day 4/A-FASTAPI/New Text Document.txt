@@ -1,39 +1,35 @@
-singleton.py
+# 2. Host Network
+docker run --network host <app-name>
 
-when to use singleton
-database connection manager
-application configuration 
-connection pool
-___________________________________________
-payments.py
+# 3. None Network
+# No normal network connectivity
+docker run --network none <app-name>
 
-factory method:
-use 
-multiple implementations
-object creation complex
-create object at runtime
-___________________________________________
-strategy patterns
-it defines multiple algorithms or behaviours, encapsulates each onne seperately and alllows them to be switched at runtime
+Docker Registry:
 
-use:
-payments
-shipping
-tax calculation
-notification
-authentication
+A docker registry is a service that store and distribute docker images.
+It allows developers and servers to push, pull and share container images.
+
+create repository:
+docker images:
+
+fastapi-training:latest
+
+username/fastapi-training:latest
 
 
-Stateless vs Stateful
+cmd for create docker hub image:
 
-The easiest way to remember:
+docker tag hello:latest 16001/hello:latest
 
-Stateless = doesn't remember previous requests
-Stateful = remembers previous requests
+hello:latest
 
-Feature	                        Stateless	Stateful
-Remembers client information?	No	        Yes
-Each request independent?	    Yes	        No
-Server stores session/state?	Usually no	Yes
-Simpler to scale?	            Yes	        More difficult
-Example	                        REST API	Online shopping session
+
+push image to docker hub:
+
+docker push 16001/hello:latest
+
+docker run -d \
+  --name fastapi-container \
+  -p 8000:8000 \
+  160001/fastapi-training:latest

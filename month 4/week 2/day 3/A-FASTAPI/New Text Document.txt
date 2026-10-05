@@ -6,7 +6,7 @@ Focuses on major components and communication.
 Includes: services, APIs, databases, load balancer, cache.
 Mostly language-independent.
 
-LLD (Low-Level Design)
+LLD (Low-Level Design)A
 Detailed design of individual components.
 Focuses on classes, objects, methods, interfaces.
 Includes OOP, SOLID principles, design patterns, UML.
