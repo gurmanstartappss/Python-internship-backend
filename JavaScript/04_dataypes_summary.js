@@ -49,3 +49,20 @@ console.log(typeof myFunction)      // "function"
 
 // stack=(primitive) copy
 // heap=(non primitive) reference
+
+let my="gurman"
+let hi=my
+hi="garg"
+
+console.log(hi) ;//garg
+console.log(my); //gurman
+
+
+let user1={
+    email:"gurman"
+}
+let user2=user1
+user2.email="garggurman"//reference(heap)
+
+console.log(user1)
+console.log(user2)
