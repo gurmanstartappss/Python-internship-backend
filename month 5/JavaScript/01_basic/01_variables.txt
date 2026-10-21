@@ -1,0 +1,11 @@
+console.log("")=variables displaced on console
+console.table("")=tabular structure of variables displayed on console 
+
+const=for declaring constants
+for variables=let and var(not used due to scope problem)
+JS=SAFE because without writing var and let we can reserve memory for the variable
+
+let account; ----gives undefined when we leave it declared
+============================================
+"use strict"----treat all js code as newer version
+alert statement---alert(3+3)
